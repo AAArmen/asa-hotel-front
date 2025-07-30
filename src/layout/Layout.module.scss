@@ -1,0 +1,111 @@
+.dynamicHeader {
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: 0.3s;
+    .lower {
+      transition: 0.3s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      border-bottom: 1px solid rgba(#00301c, 0.1);
+    }
+  }
+  .upper {
+    background-color: #00301c;
+    color: #fff;
+    .upperContent {
+      height: 56px;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .socials {
+        display: flex;
+        gap: 10px;
+        a {
+          height: 28px;
+          padding: 5px;
+          border-radius: 5px;
+          border: 1px solid rgba(#fff, 0.36);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover {
+            background-color: rgba(#fff, 0.36);
+          }
+        }
+      }
+      .contacts {
+        display: flex;
+        gap: 10px;
+        font-size: 16px;
+        line-height: 20px;
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .lower {
+    background-color: #fff;
+    .lowerContent {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        padding: 8px 14px;
+      }
+      .navBar {
+        display: flex;
+        align-items: center;
+        a {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 20px;
+          padding: 0 16px;
+          position: relative;
+          &.active {
+            &::after {
+              opacity: 1;
+              visibility: visible;
+              bottom: -10px;
+            }
+          }
+          &::after {
+            width: calc(100% - 30px);
+            height: 1px;
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #00301c;
+            transition: 0.3s;
+            opacity: 0;
+            visibility: hidden;
+          }
+          &:hover {
+            &:not(.active) {
+              &::after {
+                opacity: 1;
+                visibility: visible;
+                bottom: -10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    max-width: 1140px;
+    width: 100vw;
+    margin: 0 auto;
+  }
+}
