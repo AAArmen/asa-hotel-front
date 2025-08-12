@@ -5,6 +5,7 @@
     left: 0;
     right: 0;
     transition: 0.3s;
+    z-index: 10;
     .lower {
       transition: 0.3s;
       position: absolute;
@@ -19,7 +20,7 @@
     color: #fff;
     .upperContent {
       height: 56px;
-      padding: 10px 0;
+      padding: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -27,16 +28,17 @@
       .socials {
         display: flex;
         gap: 10px;
+
         a {
-          height: 28px;
-          padding: 5px;
-          border-radius: 5px;
-          border: 1px solid rgba(#fff, 0.36);
+          padding: 2px;
+          border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          &:hover {
-            background-color: rgba(#fff, 0.36);
+
+          img {
+            width: 24px;
+            height: 24px;
           }
         }
       }
@@ -105,7 +107,7 @@
 
   .container {
     max-width: 1140px;
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
   }
 }

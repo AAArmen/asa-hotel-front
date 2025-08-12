@@ -9,7 +9,6 @@ const Layout: FC<ILayoutProps> = ({ children, layoutInfo }) => {
   return (
     <>
       <Header layoutInfo={layoutInfo} styles={styles} />
-      {children}
       <main>{children}</main>
       <footer></footer>
     </>

@@ -5,7 +5,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useMemo, useState } from "react";
 
-const Header = ({ styles, layoutInfo }) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Header = ({ styles, layoutInfo }: any) => {
   const [topScroll, setTopScroll] = useState(0);
 
   useEffect(() => {
@@ -20,7 +21,7 @@ const Header = ({ styles, layoutInfo }) => {
 
   const router = useRouter();
 
-  const pathName = useMemo(() =>  router.pathname, [router.pathname]);
+  const pathName = useMemo(() => router.pathname, [router.pathname]);
   return (
     <header className={classNames(styles.dynamicHeader, { [styles.sticky]: topScroll > 60 })}>
       <div className={styles.upper}>
@@ -28,10 +29,11 @@ const Header = ({ styles, layoutInfo }) => {
           <div className={styles.upperContent}>
             <div className={styles.socials}>
               <Link href={layoutInfo.facebookLink} className={styles.link} target="_blank">
-                Facebook
+                <Image src="/assets/svg/facebook.svg" alt="facebook" width={80} height={80} />
               </Link>
               <Link href={layoutInfo.twitterLink} className={styles.link} target="_blank">
-                Twitter
+                <Image src="/assets/svg/twitter.svg" alt="twitter" width={80} height={80} />
+
               </Link>
             </div>
             <div className={styles.contacts}>
@@ -53,7 +55,7 @@ const Header = ({ styles, layoutInfo }) => {
         <div className={styles.container}>
           <div className={styles.lowerContent}>
             <div className={styles.logo}>
-              <Image src="/assets/logo.png" alt="logo" width={120} height={70} />
+              <Image src="/assets/images/logo.png" alt="logo" width={120} height={70} />
             </div>
             <nav className={styles.navBar}>
               {ROUTES.map((route) => {

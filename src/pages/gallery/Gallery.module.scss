@@ -1,0 +1,22 @@
+.pageContainer {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  h1 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 25px 0;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 100px;
+    img {
+      width: calc(33% - 10px);
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}
