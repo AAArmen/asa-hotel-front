@@ -2,14 +2,29 @@
   max-width: 1140px;
   width: 100vw;
   margin: 0 auto;
-  h1 {
+  h1,
+  h2 {
     font-size: 36px;
     font-weight: 500;
     line-height: 1.2;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+  }
+  .contactInfo {
+    .item {
+      font-size: 28px;
+      line-height: 1.25;
+      font-weight: 500;
+    }
+  }
+  .socials {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
   }
   iframe {
     width: 100%;
-    min-height: calc(100vh - 145px);
+    min-height: calc(100vh - 225px);
   }
 }

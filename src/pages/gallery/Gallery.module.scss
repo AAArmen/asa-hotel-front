@@ -17,6 +17,11 @@
       width: calc(33% - 10px);
       height: auto;
       object-fit: cover;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        transform: translateY(-5px);
+      }
     }
   }
 }

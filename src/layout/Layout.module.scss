@@ -65,6 +65,9 @@
       .navBar {
         display: flex;
         align-items: center;
+        @media screen and (max-width: 480px) {
+          display: none;
+        }
         a {
           font-size: 16px;
           font-weight: 500;

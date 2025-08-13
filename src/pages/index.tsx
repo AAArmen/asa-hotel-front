@@ -12,15 +12,9 @@ const Home = () => {
     <>
       {/* Слайдер */}
       <div className={styles.slider}>
-        <Swiper
-          loop
-          modules={[Navigation, Autoplay]}
-          navigation
-          //  autoplay={{ delay: 4000 }}
-          speed={2000}
-        >
+        <Swiper loop modules={[Navigation, Autoplay]} navigation autoplay={{ delay: 4000 }} speed={2000}>
           <SwiperSlide className={styles.slide} key={1}>
-            <Image width={1500} height={500} src="/assets/images/slide.jpg" alt="slider" />
+            <Image width={1500} height={500} src="/assets/images/slide.jpg" alt="slider" priority />
             <div className={styles.slideContent}>
               <h2>Отель АСА</h2>
               <div className={styles.description}>
@@ -35,7 +29,7 @@ const Home = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className={styles.slide} key={2}>
-            <Image width={1500} height={500} src="/assets/images/slide.jpg" alt="slider" />
+            <Image width={1500} height={500} src="/assets/images/slide.jpg" alt="slider" priority />
             <div className={styles.slideContent}>
               <h2>Отель АСА</h2>
               <div className={styles.description}>
@@ -163,7 +157,6 @@ const Home = () => {
             <Swiper
               loop
               modules={[Autoplay]}
-              // navigation
               slidesPerView={3}
               spaceBetween={30}
               autoplay={{ delay: 2000 }}
